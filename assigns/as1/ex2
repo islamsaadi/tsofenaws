@@ -1,0 +1,15 @@
+#!/bin/bash
+
+declare -A arr
+
+echo "Please enter a country name: (Austria, Sweden, Egypt, Germany, Italy):"
+read COUNTRY
+
+arr["Austria"]=Vienna
+arr["Sweden"]=Stockholm
+arr["Egypt"]=Cairo
+arr["Germany"]=Berlin
+arr["Italy"]=Rome
+
+#echo $COUNTRY
+echo ${arr[$COUNTRY]}

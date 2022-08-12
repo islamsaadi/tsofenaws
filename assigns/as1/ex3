@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for i in 1 2 3; do
+	printf '%-5s %5s %-5s\n' $RANDOM $RANDOM $RANDOM
+done

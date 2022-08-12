@@ -1,0 +1,8 @@
+#!/bin/bash
+
+read -p "Enter a filename:" FILENAME
+while [ ! -f "$FILENAME" ]; do
+	echo "This file does NOT exist, try again"
+	read -p "Enter a filename:" FILENAME
+done
+echo "Awesome, that was a file which actualy exist"

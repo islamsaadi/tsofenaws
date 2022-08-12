@@ -1,0 +1,4 @@
+#!/bin/bash
+	[ ! -d ./dir99 ] && mkdir dir99
+	echo Hello Bash > ./dir99/hello
+

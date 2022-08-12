@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ ! $1 ] || [ ! -d "$1" ]; then
+	echo "please provide a valid directory name as an argument"
+	exit
+fi
+
+rmdir $1
+if [ $? != 0 ]; then
+	cd $1
+	for FILE in *; do
+		if [ -f "$FILE" ]; then
+			echo "removing $FILE from $1 ..."
+			rm $FILE
+		elif [ -d "$FILE" ]; then
+			echo "removing folder $FILE from $1"
+			bash ~/Desktop/course/tsofenaws/assigns/as2/ex4/ex4 $FILE
+		fi 
+	done
+	cd ..
+	rmdir $1
+	echo "$1 removed"
+fi
+

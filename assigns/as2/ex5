@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+read -p "Enter a file name to scan: " FILENAME
+if [ -f "$FILENAME" ]; then
+	MAX=""
+	while read LINE; do
+		for WORD in $LINE; do
+			if [ $(echo -n "$WORD" | wc -m) -gt $( echo -n "$MAX" | wc -m) ]; then
+				MAX=$WORD
+			fi		
+		done
+	done < $FILENAME
+	echo "$MAX is the longest word in this file"	
+else
+	echo "file does NOT exist"
+fi

@@ -1,0 +1,16 @@
+
+#!/bin/bash
+
+echo "Please enter a word: "
+
+read WORD
+
+if [ "$WORD" = "telephone" ]; then
+        echo "The words are equal"
+else
+        if [[ "$WORD" > "telephone" ]]; then
+                echo "$WORD is After the telephone word in dictionary"
+        else
+                echo "$WORD is Bfore the telephone word in dictionary"
+        fi
+fi

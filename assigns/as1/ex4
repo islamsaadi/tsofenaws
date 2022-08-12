@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "#!/bin/bash
+	[ ! -d "./dir99" ] && mkdir dir99
+	echo "Hello Bash" > ./dir99/hello
+" > new
+chmod +x new
+bash new
